@@ -1,0 +1,18 @@
+Slides
+
+1 Intro
+2 Sommaire
+3 Présentation
+4 Présentation projet
+5 Technos utilisées
+6 Compétences:  - screen...
+		-
+		-
+		-
+		-	
+
+
+nav: accueil, à propos, Parcours, Compétences, projet, contact	
+
+police
+tempus sans itc

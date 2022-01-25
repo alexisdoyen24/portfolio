@@ -1,0 +1,196 @@
+@media screen and (min-width: 1700px){
+    #galleryItself{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 1136px){
+    #myStory{
+        article{
+            @include flex($just:space-between);
+            margin: 3rem 4rem;
+            .details{
+                height: 10rem;
+                width: 70%;
+                @include flex($dir:column);
+                background-color: rgba(58, 46, 57);
+                border-radius: 20px;
+    
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px){
+    #galleryItself{
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    #navbar {
+        display: none;
+        // flex-wrap: wrap;
+        // opacity: 0.8;
+        // color: white;
+        // h1{
+        //   font-size: 1.2rem;
+        //   color: white;
+        // }
+    }
+    // .carousel{
+    //     display: none;
+    // }
+    
+    #mobileNavbar{
+        display : block;
+    }
+
+    #myStory{
+        h1{
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        article{
+            @include flex($just:space-around, $dir:column);
+            margin: 3rem 10rem;
+            p{
+                margin-bottom: 0.5rem;
+                margin-right: 0.5rem;
+            }
+            .date{
+                background-color: transparent;
+                border-radius: 50%;
+                width: 10rem;
+                height: 3rem;
+                @include flex($dir:row);
+            }
+            .details{
+                height: 9rem;
+                width: 140%;
+                @include flex($dir:column);
+                background-color: rgba(58, 46, 57);
+                border-radius: 20px;  
+            }
+        }
+    }
+
+    #aboutMe{
+        @include flex ($just:space-evenly, $dir:column-reverse);
+        background: linear-gradient(180deg, rgb(70, 67, 67) 0%, rgba(89,104,244,1) 100%);
+        color: white;
+    
+        .presentationText{
+            width: 70%;
+            margin: 2rem 0rem 0rem;
+            p{
+                margin: 1em 0em;
+                line-height: 1.2;
+            }
+            .line{
+                width: 10.4em;
+                border-top: white solid 1px;
+                margin-top: 10px;
+            }
+        }
+    
+        img{
+            border-radius: 50%;
+            width: 12rem;
+            margin-top: 2rem;
+        }
+    }
+    #galleryItself{
+        @include flex ($just:space-between, $dir: column);
+    }
+    #copyright{
+        .returnToHeader{
+            display: block;
+        }
+    }
+}
+
+@media screen and (max-width: 600px){
+    #myStory{
+        article{
+            h2{
+                margin-bottom: 1.1rem;
+                font-size: 0.9rem;
+            }
+            p{
+                margin-bottom: 0.5rem;
+                margin-right: 0.5rem;
+                font-size: 0.9rem;
+            }
+            .date{
+                font-size: 1rem;
+            }
+            .details{
+                height: 9rem;
+                width: 19rem;
+                @include flex($dir:column);
+                background-color: rgba(58, 46, 57);
+                border-radius: 20px;  
+            }
+        }
+    }
+
+    #myTools{
+        padding-bottom: 0rem;
+        h1{
+            padding-top: 0rem;
+            padding-left: 10%;
+        }
+    }
+    .tools{
+        @include flex($just:space-between, $dir:column);
+        flex-wrap: wrap;
+        margin: 0rem 2rem;
+        img{
+            margin: 1rem;
+            width: 10rem;
+            height: 10rem;
+        }
+    }
+    #whereAmI{
+        .map{
+            background-image: url(/assets/img/map3.PNG);
+            background-size: cover;
+            background-position: 64%;
+            height: 60vh;
+            margin: 3rem 3rem 0rem 3rem;
+            padding-bottom: 3rem;
+            border-radius: 10px;
+        }
+    }
+    #galleryItself {
+        .boxSizing {
+            padding-left: 3%;
+            width: 120%;
+        }
+    }
+}
+
+@media screen and (max-width: 425px){
+    #dropdown a {
+        color: #464343;
+        font-size: 1.3rem;
+    }
+}
+@media screen and (max-width: 340px){
+    #galleryItself {
+        margin: 3% 3% 0% 3%;
+        padding-bottom: 3%;
+    }
+    #MyPortfolio{
+        h1{
+            padding-left: 6%;
+        }
+        h2{
+            padding-left: 6%;
+        }
+        .line{
+            margin-left: 6%;
+        }
+    }
+}

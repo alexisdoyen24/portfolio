@@ -1,0 +1,296 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    @include decoration_text_none;
+    color: $thirdColor;
+    font-family: "palanquin";
+}
+h1, h2{
+    font-family: "ubuntu";
+}
+
+// SECTION ABOUT ME----------------------
+#aboutMe{
+    @include flex ($just:space-evenly);
+    background: linear-gradient(180deg, $primaryColor 0%, $secondaryColor 100%);
+    color: white;
+
+    .presentationText{
+        width: 40%;
+        margin: 5rem 0rem 2rem;
+        p{
+            margin: 1em 0em;
+            line-height: 1.2;
+        }
+        .line{
+            width: 10.4em;
+            border-top: white solid 1px;
+            margin-top: 10px;
+        }
+    }
+
+    img{
+        border-radius: 50%;
+        width: 12rem;
+    }
+}
+
+// SECTION MY STORY----------------------
+#myStory{
+    background: linear-gradient(180deg, $secondaryColor 80%, $primaryColor 100%);
+    padding-bottom: 5rem;
+    >img{
+        width: 20rem;
+        display: block;
+        margin: auto;
+        padding-top: 2rem;
+    }
+    h1{
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    article{
+        @include flex($just:space-around);
+        margin: 3rem 10rem;
+        h2{
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        p{
+            margin-bottom: 0.5rem;
+        }
+        .date{
+            background-color: rgb(58, 46, 57);
+            border-radius: 50%;
+            width: 10rem;
+            height: 10rem;
+            @include flex($dir:column);
+        }
+        .details{
+            height: 10rem;
+            width: 50%;
+            @include flex($dir:column);
+            background-color: rgba(58, 46, 57);
+            border-radius: 20px;
+
+        }
+    }
+}
+
+// SECTION MY TOOLS------------------------
+#myTools{
+    background: linear-gradient(180deg, $primaryColor 0%, $secondaryColor 100%);
+    padding-bottom: 5rem;
+    h1{
+        padding-top: 3rem;
+        padding-left: 10%;
+    }
+    .line{
+        width: 7rem;
+        border-top: white solid 1px;
+        margin-top: 10px;
+        margin-bottom: 5rem;
+        margin-left: 10%;
+    }
+}
+.tools{
+    @include flex($just:space-between);
+    flex-wrap: wrap;
+    margin: 0rem 5rem;
+    img{
+        margin: 1rem;
+        width: 10rem;
+        height: 10rem;
+    }
+}
+
+// SECTION MY PORTFOLIO---------------------
+#MyPortfolio{
+    background: linear-gradient(180deg, $secondaryColor 80%, $primaryColor 100%);
+    h1{
+        padding-top: 5rem;
+        padding-left: 10%;
+    }
+    h2{
+        padding-left: 10%;
+        font-size: 1rem;
+        font-family: "andika";
+        font-weight: 400;
+        margin-bottom: 3rem;
+    }
+    .line{
+        width: 9.4rem;
+        border-top: white solid 1px;
+        margin-top: 10px;
+        margin-bottom: 1rem;
+        margin-left: 10%;
+    }
+}
+#galleryItself{
+    @include flex ($just:space-between, $dir: row, $align: center);
+    flex-wrap: wrap;
+    margin:auto;
+    width: 70%;
+
+    article {
+        margin-bottom: 3em;
+    }
+
+    .miniature{
+        width: 300px;
+        height: 300px;
+        overflow: hidden; // Utile pour l'effet de zoom en hover
+        display: inline-block; // Utile pour l'effet de zoom en hover
+        // box-shadow: 5px 5px 5px $thirdColor;
+        img{
+            width: 100%;
+            height:100%;
+            object-fit: cover;
+            object-position: top;
+            transition: all 0.3s ease-in-out;
+        }
+        img:hover{
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+    }
+    .boxSizing{
+        display: none; /* Caché par défaut */
+        position: fixed; /* Reste en place */
+        z-index: 100; /* Mis en avant */
+        padding-top: 100px; 
+        padding-left: 10rem;
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Scroll si besoin */
+        background-color: rgb(0,0,0); 
+        background-color: rgba(0,0,0,0.9); 
+        img{
+            width:80%;
+        }
+    }
+    .modal-content {
+        margin: auto;
+        display: block;
+    }     
+}
+
+// SECTION WHERE AM I----------------------
+#whereAmI{
+    background: linear-gradient(180deg, $primaryColor 0%, $secondaryColor 100%);
+    h1{
+        padding-top: 3rem;
+        padding-left: 10%;
+    }
+    .line{
+        width: 7.4rem;
+        border-top: white solid 1px;
+        margin-top: 10px;
+        margin-bottom: 1rem;
+        margin-left: 10%;
+    }
+    p{
+        margin-left: 10%;
+        margin-top: 2rem;
+    }
+}
+.map{
+    background-image: url(/assets/img/map3.PNG);
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    margin: 3rem 3rem 0rem 3rem;
+    padding-bottom: 3rem;
+    border-radius: 10px;
+}
+
+// SECTION CONTACT ME--------------------------
+#contactMe{
+    background: linear-gradient(180deg, $secondaryColor 80%, $primaryColor 100%);
+    padding-bottom: 3rem;
+    h1{
+        padding-top: 4rem;
+        text-align: center;
+    }
+    .line{
+        width: 8.8rem;
+        border-top: white solid 1px;
+        margin-top: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+#formContact{
+    font-size: 1.2rem;
+    // height: 90vh;
+    .button{
+        width: 10rem;
+        margin: auto;
+        a{
+            padding: 10px 40px;
+            border-radius: 30px;
+            background-color: $primaryColor;
+            box-shadow: 3px 5px 5px $secondaryColor;
+            transition: all 0.3s ease-in-out;
+        }
+        a:hover {
+            background: linear-gradient(90deg, $secondaryColor 0%, $primaryColor 100%);
+            box-shadow: none;
+            color: $thirdColor;
+        }
+    }
+    form{
+        width: 100%;
+        margin-bottom: 2rem;
+        @include flex ($just:center, $dir: column, $align: center);
+        .labelandInput{
+            @include flex ($just:center, $dir: column, $align: center);
+            width: 100%;
+            padding-top: 25px;
+            input, textarea{
+                color: black;
+                width: 1000px;
+                max-width: 70%;
+                height: 60px;
+                font-size: 1.2rem;
+                border-radius: 10px;
+            }
+            textarea{
+                height: 200px;
+                max-width: 70%;
+                max-height: 200px;
+            }
+        }
+    }
+}
+
+// SECTION COPYRIGHT-----------------
+#copyright{
+    .returnToHeader{
+        display: none;
+        position:fixed;
+        padding: 5px 20px;
+        bottom: 3rem;
+        right: 1rem;
+        z-index: 99;
+        background: linear-gradient(90deg, $secondaryColor 0%, $primaryColor 100%);
+        border-radius: 30px;
+        font-size: 1.5em;
+        box-shadow: 1px 1px 4px $secondaryColor;
+        animation-name: getHeader;
+        animation-duration: 0.5s;
+        a{
+            color : $thirdColor;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }       
+    }
+
+    background-color: rgb(70, 67, 67);
+    text-align: center;
+    letter-spacing: .2rem;
+    padding: 1rem 0rem;
+}
+
